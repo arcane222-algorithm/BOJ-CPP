@@ -3,35 +3,38 @@
 #include <iostream>
 #include "ProblemBase.h"
 
-
-class BOJTest : public ProblemBase
+namespace BOJ
 {
-public:
-	BOJTest(const size_t problemNum) : ProblemBase(problemNum) {}
-
-public:
-	void solve() override
+	class BOJTest : public ProblemBase
 	{
-		input();
+	public:
+		BOJTest(const size_t problemNum) : ProblemBase(problemNum) {}
 
-		//do something
-		std::cout << "test boj problem class" << std::endl;
+	public:
+		void solve() override
+		{
+			input();
 
-		output();
-	}
+			//do something
+			std::cout << "test boj problem class" << std::endl;
 
-protected:
-	void input() override
-	{
-		std::cin >> _n >> _m;
-	}
+			output();
+		}
 
-	void output() override
-	{
-		std::cout << (_n + _m) << std::endl;
-	}
+	protected:
+		void input() override
+		{
+			std::cin >> _n >> _m;
+		}
 
-private:
-	int _n, _m;
-};
+		void output() override
+		{
+			std::cout << (_n + _m) << std::endl;
+		}
 
+	private:
+		int _n, _m;
+	};
+
+
+}
