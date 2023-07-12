@@ -4,11 +4,13 @@
 #include <memory>
 #include "stack/BOJ1662.h";
 
+using Base = BOJ::ProblemBase;
+
 int main()
 {
 	//std::unique_ptr<Base> problemPtr = std::make_unique<BOJ::BOJ1662>(1662);
 	//problemPtr->solve();
 
-	BOJ::BOJ1662 problem(1662);
-	problem.solve();
+	std::unique_ptr<Base> problemPtr = std::make_unique<BOJ::BOJ1662>(1662);
+	problemPtr->solve();
 }
